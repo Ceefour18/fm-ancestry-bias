@@ -1,0 +1,14 @@
+leiden,CD8_naive,CD8_effector_memory,MAIT,assigned,n_cells
+0,-0.301,0.937,-0.1,CD8_effector_memory,6392
+1,-0.357,1.076,-0.226,CD8_effector_memory,7170
+2,-0.338,1.042,-0.18,CD8_effector_memory,8023
+3,-0.282,0.767,-0.076,CD8_effector_memory,5693
+4,0.189,-0.425,-0.159,CD8_naive,2876
+5,-0.347,0.133,0.693,MAIT,4679
+6,0.115,0.239,-0.125,CD8_naive,2237
+7,-0.14,-0.601,0.03,MAIT,5608
+8,-0.374,0.254,-0.204,CD8_effector_memory,1675
+9,-0.049,-0.233,-0.252,CD8_naive,7263
+10,-0.298,0.59,-0.161,CD8_effector_memory,3616
+11,0.017,0.159,-0.123,CD8_naive,6257
+12,-0.325,0.571,-0.183,CD8_effector_memory,253

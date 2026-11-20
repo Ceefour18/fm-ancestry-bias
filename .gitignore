@@ -1,0 +1,15 @@
+data/
+checkpoints/
+logs/
+work/
+.nextflow*
+*.h5ad
+*.parquet
+*.rds
+*.RDS
+*.tar
+*.tar.gz
+*.mtx
+*.mtx.gz
+__pycache__/
+results/labels/*.png

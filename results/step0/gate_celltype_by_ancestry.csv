@@ -1,0 +1,70 @@
+cell_type,donors_AFR,donors_EUR,cells_AFR,cells_EUR,passes
+"effector memory CD4-positive, alpha-beta T cell",2,15,21359,5925,False
+"central memory CD4-positive, alpha-beta T cell",2,15,24305,9794,False
+"central memory CD8-positive, alpha-beta T cell",2,0,2681,0,False
+"CD16-negative, CD56-bright natural killer cell, human",2,4,1476,258,False
+"CD16-positive, CD56-dim natural killer cell, human",2,11,19313,1710,False
+naive B cell,2,19,5715,5969,False
+"naive thymus-derived CD4-positive, alpha-beta T cell",2,19,28660,15702,False
+"naive thymus-derived CD8-positive, alpha-beta T cell",2,19,7182,4035,False
+plasma cell,2,0,330,0,False
+memory B cell,2,18,8663,2777,False
+"effector memory CD8-positive, alpha-beta T cell",2,0,5500,0,False
+mucosal invariant T cell,2,5,2003,488,False
+"Axl+ dendritic cell, human",1,0,65,0,False
+platelet,1,12,1844,212,False
+"CD14-low, CD16-positive monocyte",1,4,4371,167,False
+Be cell,1,0,2131,0,False
+B cell,1,91,4,58079,False
+T cell,1,5,228,187,False
+"CD8-positive, alpha-beta regulatory T cell",1,0,110,0,False
+CD141-positive myeloid dendritic cell,1,0,137,0,False
+"CD14-positive, CD16-negative classical monocyte",1,4,23029,3004,False
+erythrocyte,1,5,222,164,False
+double negative thymocyte,1,0,181,0,False
+classical monocyte,1,89,2689,78202,False
+common lymphoid progenitor,1,0,12,0,False
+common myeloid progenitor,1,0,72,0,False
+"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",1,15,28,979,False
+memory CCR4-positive regulatory T cell,1,0,371,0,False
+mature gamma-delta T cell,1,0,3941,0,False
+group 1 innate lymphoid cell,1,0,1,0,False
+gamma-delta T cell,1,29,9,3038,False
+CD8aa(I) thymocyte,1,0,298,0,False
+basophil mast progenitor cell,1,0,13,0,False
+CD1c-positive myeloid dendritic cell,1,0,1410,0,False
+"CD4-positive, CD25-positive, alpha-beta regulatory T cell",1,4,50,95,False
+"CD4-positive, alpha-beta memory T cell",1,5,489,1028,False
+"CD8-positive, alpha-beta memory T cell",1,24,86,3494,False
+plasmacytoid dendritic cell,1,83,617,2910,False
+progenitor cell,1,68,84,252,False
+transitional stage B cell,1,0,398,0,False
+memory regulatory T cell,1,0,1539,0,False
+natural killer cell,1,106,323,50201,False
+plasmablast,1,80,2,1243,False
+non-classical monocyte,1,89,980,14092,False
+naive regulatory T cell,1,0,1311,0,False
+intermediate monocyte,1,0,835,0,False
+innate lymphoid cell,1,0,62,0,False
+mast cell,1,0,1,0,False
+macrophage,1,0,30,0,False
+group 3 innate lymphoid cell,1,0,1,0,False
+immature innate lymphoid cell,1,0,42,0,False
+CD14-positive monocyte,0,12,0,5163,False
+"CD8-positive, alpha-beta T cell",0,86,0,87347,False
+erythroid lineage cell,0,7,0,133,False
+"effector CD8-positive, alpha-beta T cell",0,9,0,899,False
+"effector CD4-positive, alpha-beta T cell",0,4,0,1286,False
+dendritic cell,0,11,0,1151,False
+conventional dendritic cell,0,83,0,6443,False
+class switched memory B cell,0,4,0,21,False
+IgG plasmablast,0,5,0,15,False
+IgA plasmablast,0,5,0,47,False
+"CD4-positive, alpha-beta T cell",0,102,0,177517,False
+monocyte,0,10,0,10494,False
+granulocyte,0,5,0,86,False
+lymphocyte,0,74,0,1523,False
+neutrophil,0,5,0,48,False
+naive T cell,0,5,0,1020,False
+myeloid dendritic cell,0,15,0,2616,False
+stem cell,0,5,0,117,False

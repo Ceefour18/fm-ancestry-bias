@@ -1,0 +1,71 @@
+pred_raw,B,CD4_T,CD8_T,DC,Monocyte,NK,Other
+Age-associated B cells,443,0,0,0,0,0,0
+Alveolar macrophages,0,0,0,0,1382,0,0
+B cells,18,0,0,0,0,0,0
+CD16+ NK cells,0,0,0,0,0,1113,0
+CD16- NK cells,0,0,0,0,0,614,0
+CD8a/a,0,0,24,0,0,0,0
+CD8a/b(entry),0,0,21,0,0,0,0
+CRTAM+ gamma-delta T cells,0,0,60,0,0,0,0
+Classical monocytes,0,0,0,0,894,0,0
+Cycling T cells,0,0,0,0,0,0,6
+Cycling monocytes,0,0,0,0,3,0,0
+DC,0,0,0,72,0,0,0
+DC precursor,0,0,0,6,0,0,0
+DC1,0,0,0,6,0,0,0
+DC2,0,0,0,321,0,0,0
+DC3,0,0,0,5,0,0,0
+Double-negative thymocytes,0,0,0,0,0,0,2
+Double-positive thymocytes,0,0,0,0,0,0,61
+ETP,0,0,0,0,0,0,1
+Early lymphoid/T lymphoid,0,0,0,0,0,0,22
+Endothelial cells,0,0,0,0,0,0,1
+Epithelial cells,0,0,0,0,0,0,3
+Erythrophagocytic macrophages,0,0,0,0,2,0,0
+Follicular B cells,176,0,0,0,0,0,0
+Follicular helper T cells,0,0,0,0,0,0,165
+Germinal center B cells,1,0,0,0,0,0,0
+ILC,0,0,0,0,0,16,0
+ILC2,0,0,0,0,0,1,0
+ILC3,0,0,0,0,0,2,0
+Intermediate macrophages,0,0,0,0,1411,0,0
+Intestinal macrophages,0,0,0,0,56,0,0
+Kidney-resident macrophages,0,0,0,0,1,0,0
+Kupffer cells,0,0,0,0,0,0,25
+Large pre-B cells,1,0,0,0,0,0,0
+MAIT cells,0,0,375,0,0,0,0
+Macrophages,0,0,0,0,260,0,0
+Mast cells,0,0,0,0,0,0,7
+Megakaryocyte-erythroid-mast cell progenitor,0,0,0,0,0,0,1
+Megakaryocytes/platelets,0,0,0,0,0,0,2
+Memory B cells,2332,0,0,0,0,0,0
+Mid erythroid,0,0,0,0,0,0,1
+Migratory DCs,0,0,0,27,0,0,0
+Mono-mac,0,0,0,0,0,0,16
+Monocyte precursor,0,0,0,0,1,0,0
+Monocytes,0,0,0,0,524,0,0
+Myelocytes,0,0,0,0,0,0,1211
+NK cells,0,0,0,0,0,1905,0
+NKT cells,0,0,0,0,0,263,0
+Naive B cells,2528,0,0,0,0,0,0
+Non-classical monocytes,0,0,0,0,74,0,0
+Plasma cells,17,0,0,0,0,0,0
+Plasmablasts,1,0,0,0,0,0,0
+Pre-pro-B cells,1,0,0,0,0,0,0
+Proliferative germinal center B cells,6,0,0,0,0,0,0
+Regulatory T cells,0,1678,0,0,0,0,0
+Small pre-B cells,1,0,0,0,0,0,0
+T(agonist),0,0,0,0,0,0,99
+Tcm/Naive cytotoxic T cells,0,0,1992,0,0,0,0
+Tcm/Naive helper T cells,0,27121,0,0,0,0,0
+Tem/Effector helper T cells,0,1964,0,0,0,0,0
+Tem/Temra cytotoxic T cells,0,0,1720,0,0,0,0
+Tem/Trm cytotoxic T cells,0,0,2813,0,0,0,0
+Transitional B cells,3,0,0,0,0,0,0
+Transitional NK,0,0,0,0,0,29,0
+Treg(diff),0,0,0,0,0,0,70
+Trm cytotoxic T cells,0,0,490,0,0,0,0
+Type 1 helper T cells,0,0,0,0,0,0,784
+Type 17 helper T cells,0,0,0,0,0,0,223
+gamma-delta T cells,0,0,7,0,0,0,0
+pDC,0,0,0,8,0,0,0
