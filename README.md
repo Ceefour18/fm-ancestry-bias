@@ -23,7 +23,7 @@ African-ancestry cells.
 
 ## Preregistration
 The full analysis plan is in [`PREREGISTRATION.md`](PREREGISTRATION.md), frozen at git tag `prereg-v1`
-and registered on OSF: `[OSF link - added after submission]`.
+and registered on OSF: [osf.io/xed6m](https://osf.io/xed6m/overview) (DOI [10.17605/OSF.IO/XED6M](https://doi.org/10.17605/OSF.IO/XED6M)).
 Primary outcome: per-donor macro-F1 on the original authors' coarse cell-type labels.
 Smallest effect of interest: 2 macro-F1 points.
 

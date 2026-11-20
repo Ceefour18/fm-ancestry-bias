@@ -1,6 +1,6 @@
 # Preregistration: Ancestry bias in single-cell foundation models
 
-Frozen at git tag `prereg-v1`. Registered on OSF (Secondary Data Preregistration).
+Frozen at git tag `prereg-v1`. Registered on OSF (Secondary Data Preregistration): https://doi.org/10.17605/OSF.IO/XED6M
 Any departure will be reported in a "Deviations from preregistration" section with its reason.
 
 ## 1. Research questions and hypotheses
