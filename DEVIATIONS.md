@@ -22,3 +22,10 @@ Projected 19.6 GPU-hours for both datasets (<=48) -> 33-layer model used, as pre
 5,000 Randolph cells, seeds 2026 vs 2027: kNN (k=15, 5-fold) coarse-label agreement 0.971 (>=0.95, PASS).
 Embeddings are seed-dependent (median per-cell cosine 0.887, min 0.717) due to UCE gene sampling;
 all analyses use seed 2026.
+
+## 2026-11-25 — scGPT runtime configuration (clarification)
+scGPT 0.2.4 run with use_fast_transformer=False (flash-attn 1.x not buildable on RTX 6000 Ada);
+pretrained flash-attention weights are remapped by scGPT on load. Weight-load sanity check on 2,000 Randolph
+cells: kNN (k=15, 5-fold) coarse accuracy 0.929 vs 0.575 for random embeddings. max_length 1200, seed 2026.
+Checkpoints: whole-human (primary) and continual-pretrained (sensitivity), official Google Drive links in the
+scGPT README; SHA256 in results/SHA256SUMS_scgpt.txt.
