@@ -29,3 +29,10 @@ pretrained flash-attention weights are remapped by scGPT on load. Weight-load sa
 cells: kNN (k=15, 5-fold) coarse accuracy 0.929 vs 0.575 for random embeddings. max_length 1200, seed 2026.
 Checkpoints: whole-human (primary) and continual-pretrained (sensitivity), official Google Drive links in the
 scGPT README; SHA256 in results/SHA256SUMS_scgpt.txt.
+
+## 2026-11-25 — scFoundation configuration (clarification)
+Official checkpoint models.ckpt (SharePoint, modified 2025-02-04; SHA256 in results/SCFOUNDATION_FILE_PROVENANCE.txt),
+repo commit 397631c. get_embedding.py with README defaults for cell embeddings: singlecell, output cell, pool all
+(3,072 dims), tgthighres t4, pre_normalized F (raw counts), version ce; internal seed 0. Input mapped by gene
+symbol to the 19,264-gene list (Randolph test: 18,643 genes matched, 89.0% of UMIs retained; unmatched genes
+zero-filled). Weight-load check (2,000 Randolph cells): kNN accuracy 0.960 vs 0.577 random. torch 2.4.1+cu121.

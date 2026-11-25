@@ -8,5 +8,6 @@
 #SBATCH -o logs/uce_%j.out
 source ~/miniforge3/etc/profile.d/conda.sh
 cd ~/fm-ancestry-bias
+echo "NODE: $(hostname) | GPU: $(nvidia-smi --query-gpu=name --format=csv,noheader | head -1)"
 conda activate fm-uce
 python scripts/51_embed_uce.py --stage run "$@" 2>&1 | grep -v -i "warning"
