@@ -1,2 +1,3 @@
 all_tokens.torch	minwoosun/uce-misc@bffb91084e4476698984e7e01f6170ce291f4074/all_tokens.torch	md5 3523ea431c403f95701b6eeb0c30b997 (matches figshare)
 protein_embeddings.tar.gz	minwoosun/uce-misc@bffb91084e4476698984e7e01f6170ce291f4074/protein_embeddings.tar.gz	md5 6756d7fa8348e0f70b5e5b11e324f023 (matches figshare)
+33l_8ep_1024t_1280.torch	figshare 43423236 (browser download, chunked upload)	md5 eed62d4fe51873c87bcf9660faa07707 (matches figshare)
