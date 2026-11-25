@@ -1,0 +1,1 @@
+models.ckpt	official SharePoint (scFoundation README line 35), file modified 2025-02-04, repo commit 397631c	sha256 9f40bf324d3d0084c4b288d06f5af4fddd12206e2a3f022551d12e89e33a0ea9 (matches laptop download)
