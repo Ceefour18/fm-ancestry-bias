@@ -40,3 +40,5 @@ zero-filled). Weight-load check (2,000 Randolph cells): kNN accuracy 0.960 vs 0.
 ## 2026-11-26 — UCE full runs complete
 33-layer, seed 2026, batch 12. Randolph (234,727 x 1,280) 31,402 s; prostate (286,890 x 1,280) 38,831 s.
 Total 19.5 GPU-hours (timing-test projection 19.6). No NaNs; cell order verified against input.
+logs/scf_314.out:genes matched: 18643 of 19264 scFoundation genes (96.8%); UMI kept: 89.0%
+logs/scf_315.out:genes matched: 18791 of 19264 scFoundation genes (97.5%); UMI kept: 94.3%
