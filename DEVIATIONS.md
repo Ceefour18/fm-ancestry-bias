@@ -119,3 +119,14 @@ Note: the training pool has 25 AA / 20 EA donors, so the "random" regime is near
 H2 learning rates (EA validation donors, EA-only regime, seed 2026; pooled macro-F1):
 Geneformer 1e-5 0.971 | 5e-5 0.959 | 1e-4 0.960 -> 1e-5. scGPT 1e-5 0.961 | 5e-5 0.935 | 1e-4 0.956 -> 1e-5.
 Best value is at the lower edge of the grid; not extended (differences ~1 point).
+H2 Geneformer runs: 7 of 9 failed on neuron-gpu02 (RTX 6000 Ada; driver CUDA 12.8 cannot run the CUDA 13
+torch build in fm-geneformer) while the A6000 node was down. All 9 final Geneformer runs were rerun on
+neuron-gpu02 in fm-scf (same packages, torch 2.4.1+cu121) for consistency; the 2 earlier successful runs are
+kept in results/preds_h2/old_torch215/ and not analysed. Learning-rate selection had used torch 2.15 on A6000.
+fm-scf: accelerate pinned to 1.0.1 (newer release incompatible with torch 2.4.1) for H2 Geneformer reruns.
+
+## 2026-11-26 — H2 results (preregistered)
+f1 ~ AA * regime + (1 | donor), EA-only reference, 40 fixed test donors, 3 seeds per regime.
+scGPT: AA gap under EA-only -2.25 [-3.45, -1.05]; balanced +0.45 [0.11, 0.78] p=0.009; random +0.72 p<0.001.
+Geneformer (rerun in fm-scf): AA gap -1.54 [-2.56, -0.51]; balanced +0.17 p=0.20; random +0.14 p=0.29.
+NK-cell AA gap persists in all regimes (-6.4 to -9.3).

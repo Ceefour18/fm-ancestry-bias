@@ -9,5 +9,5 @@
 source ~/miniforge3/etc/profile.d/conda.sh
 cd ~/fm-ancestry-bias
 echo "NODE: $(hostname) | GPU: $(nvidia-smi --query-gpu=name --format=csv,noheader | head -1)"
-conda activate fm-geneformer
+conda activate fm-scf
 python scripts/91_finetune_geneformer.py "$@" 2>&1 | grep -v -i "warning"
