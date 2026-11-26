@@ -53,3 +53,8 @@ models as preregistered. The preregistered patients-only sensitivity analysis re
 Pooled H1b: Randolph donors (healthy volunteers) are coded disease group "Control", sharing that level with
 prostate controls; coding them as a separate level duplicated the dataset term (singular model).
 Age is available for Randolph only, so pooled models adjust for log(cells), dataset and disease group.
+
+## 2026-11-26 — H4 implementation detail
+iLISI (harmonypy compute_lisi, perplexity 30) and ancestry silhouette (Euclidean) computed per cell type on
+up to 5,000 cells per cell type (seed 2026), identical cells for every method; Randolph NI cells as in H1.
+Paired two-sided Wilcoxon vs scVI across 12 dataset x cell-type units.
