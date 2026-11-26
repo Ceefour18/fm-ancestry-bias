@@ -103,3 +103,19 @@ CellTypist label-mapping correction: the coarse mapping (inherited from the blin
 "Type 1/Type 17/Follicular helper T cells" and "Treg(diff)" to Other instead of CD4_T, and "Kupffer cells"/
 "Mono-mac" to Other instead of Monocyte. Corrected in script 41; "Other" share was equal by ancestry before
 the fix (AA 5.05%, EA 4.89%). CellTypist excluded from the fine-label sensitivity row (no fine labels).
+
+## 2026-11-26 — H2 design (fixed before training)
+Fixed split 2026: 40 test donors (never used for training/tuning); 5 EA validation donors removed from the
+50-donor training pool (seed 2026) for learning-rate selection only. Regimes of equal size N (= remaining EA
+donors): EA-only (all), balanced (N/2 EA + N/2 AA), random (N from pool); seeds 2026-2028 vary donor draws
+and initialisation. Mock (NI) cells. Geneformer: BertForSequenceClassification on the V2-104M checkpoint,
+3 epochs, batch 8, linear schedule with 10% warmup, bf16; learning rate chosen from {1e-5, 5e-5, 1e-4} by
+pooled macro-F1 on the EA validation donors (EA-only regime, seed 2026).
+scGPT H2: whole-human checkpoint + 6-class CLS head (159/169 tensors pretrained), 51 expression bins, up to
+1,200 genes per cell, 5 epochs, batch 32, Adam (eps 1e-4), StepLR gamma 0.9, AMP, no flash-attention;
+learning rate chosen from {1e-5, 5e-5, 1e-4} by pooled macro-F1 on the EA validation donors.
+Note: the training pool has 25 AA / 20 EA donors, so the "random" regime is near-balanced by chance
+(10-12 AA of 20); the informative contrast is EA-only vs balanced.
+H2 learning rates (EA validation donors, EA-only regime, seed 2026; pooled macro-F1):
+Geneformer 1e-5 0.971 | 5e-5 0.959 | 1e-4 0.960 -> 1e-5. scGPT 1e-5 0.961 | 5e-5 0.935 | 1e-4 0.956 -> 1e-5.
+Best value is at the lower edge of the grid; not extended (differences ~1 point).
