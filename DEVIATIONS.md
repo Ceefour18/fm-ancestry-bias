@@ -83,3 +83,12 @@ Seurat v3.1.5, SCTransform per condition (batch, % mito regressed), anchor-based
 SNN graph on PCs 1-20, FindClusters resolution 0.5; clusters labelled by canonical markers
 (CD8 T: CD3D+ CD8A+; NK: CD3D- NKG7+ GNLY+). Labels are cluster-level and PCA-derived, consistent with the
 PCA baseline's advantage under author labels and its loss under marker-based labels.
+
+## 2026-11-26 — Sensitivity analyses: scope (decided before running them)
+Run: influenza cells; composition-matched test sets; continuous YRI; fine labels; prostate patients-only and
+controls-only; CV seeds 2027-2030. Not run at this stage: "all 59 prostate donors" and "5-MAD QC", because
+both change the cell set and require re-embedding with all foundation models (~25+ GPU-hours); deferred.
+Sensitivity results (script 84): no analysis yields a "meaningful gap" for any method (flu cells, continuous
+YRI, fine labels, composition-matched, prostate patients-only/controls-only). Composition matching uses each
+donor's present cell types (renormalised mean composition), so donors lacking a rare type (e.g. DC) are kept;
+with this, composition-matched Randolph gaps are -0.25 to -0.92 and all methods are equivalent.
