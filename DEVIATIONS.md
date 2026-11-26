@@ -78,3 +78,8 @@ accounts for most of the foundation-model-specific deficit. Preregistered result
    UCE -0.41 (p 0.17), Geneformer -0.18, scFoundation -0.21, scVI -0.40, scGPT -0.26 (all p > 0.1).
    Interpretation: the AA deficit (~1 pt) is method-general and persists with marker labels; the
    foundation-model excess over PCA is label-dependent (PCA's gap grows from -0.21 to -0.73).
+Reference-label provenance (Randolph et al. 2021, supplementary methods; Randolph PhD dissertation ch. III):
+Seurat v3.1.5, SCTransform per condition (batch, % mito regressed), anchor-based integration, PCA (30 PCs),
+SNN graph on PCs 1-20, FindClusters resolution 0.5; clusters labelled by canonical markers
+(CD8 T: CD3D+ CD8A+; NK: CD3D- NKG7+ GNLY+). Labels are cluster-level and PCA-derived, consistent with the
+PCA baseline's advantage under author labels and its loss under marker-based labels.
