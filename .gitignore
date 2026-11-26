@@ -14,3 +14,4 @@ work/
 __pycache__/
 results/labels/*.png
 models/
+results/preds/
