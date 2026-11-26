@@ -3,7 +3,7 @@
 import os, numpy as np, pandas as pd, anndata, statsmodels.formula.api as smf
 from sklearn.metrics import f1_score
 from statsmodels.stats.multitest import multipletests
-M = 0.02; METHODS = ["pca", "scvi", "geneformer", "uce", "scgpt_human", "scfoundation", "scgpt_cp"]
+M = 0.02; METHODS = ["pca", "scvi", "celltypist", "geneformer", "uce", "scgpt_human", "scfoundation"]
 
 def donor_f1(p, true="label_coarse", pred="pred_coarse"):
     out = {}
@@ -37,7 +37,7 @@ analyses = {}
 # primary (reference), fine labels, prostate patients / controls
 P = D[D.seed == 2026].copy()
 analyses["primary (reference)"] = P
-analyses["fine labels"] = P.assign(macro_f1=P.fine_macro_f1)
+analyses["fine labels"] = P[P.method != "celltypist"].assign(macro_f1=P.fine_macro_f1)
 analyses["prostate patients only"] = P[(P.dataset == "prostate") & (P.disease != "Control")]
 analyses["prostate controls only"] = P[(P.dataset == "prostate") & (P.disease == "Control")]
 

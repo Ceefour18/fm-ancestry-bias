@@ -17,7 +17,7 @@ for d in ["randolph", "prostate"]:
     covs = [c for c in ["ancestry", "age", "YRI", "batch", "classification", "condition"] if c in obs]
     for f in sorted(glob.glob(f"results/preds/{d}_primary_*_s*.csv.gz")):
         method = f.split(f"{d}_primary_")[1].rsplit("_s", 1)[0]; seed = int(f.rsplit("_s", 1)[1][:4])
-        p = pd.read_csv(f).set_index("cell_id")
+        p = pd.read_csv(f).set_index("cell_id"); p["pred_fine"] = p.pred_fine.fillna("NA").astype(str)
         g_all = p.join(obs[["label_coarse", "label_fine"]].astype(str))
         assert g_all.label_coarse.notna().all(), f"{f}: cells missing from labelled file"
         for donor, g in g_all.groupby("subject_id"):

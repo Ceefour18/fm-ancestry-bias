@@ -6,8 +6,8 @@ import numpy as np, pandas as pd, statsmodels.formula.api as smf
 from statsmodels.stats.multitest import multipletests
 from statsmodels.stats.power import TTestIndPower
 M = 0.02
-METHODS = ["pca", "scvi", "geneformer", "uce", "scgpt_human", "scfoundation", "scgpt_cp"]   # 7 for BH
-H1B = ["pca", "scvi", "geneformer", "uce", "scgpt_human", "scfoundation"]
+METHODS = ["pca", "scvi", "celltypist", "geneformer", "uce", "scgpt_human", "scfoundation", "scgpt_cp"]
+H1B = ["pca", "scvi", "celltypist", "geneformer", "uce", "scgpt_human", "scfoundation"]
 D = pd.read_csv("results/metrics/donor_metrics.csv")
 D["AA"] = (D.ancestry == "AA").astype(int); D["log_cells"] = np.log(D.n_cells)
 D["disease"] = D["classification"].fillna("Control").astype(str) if "classification" in D else "none"
@@ -40,10 +40,12 @@ for y in ["macro_f1", "bal_acc", "fine_macro_f1"]:
     for d in ["randolph", "prostate"]:
         for s in sorted(D.seed.unique()):
             for m in METHODS:
-                rows.append({"metric": y, "dataset": d, "seed": s, "method": m,
-                             **h1(D[(D.dataset == d) & (D.method == m) & (D.seed == s)], y)})
+                df = D[(D.dataset == d) & (D.method == m) & (D.seed == s)]
+                if len(df) == 0 or (m == "celltypist" and y == "fine_macro_f1"): continue
+                rows.append({"metric": y, "dataset": d, "seed": s, "method": m, **h1(df, y)})
 R = pd.DataFrame(rows)
-R["p_bh"] = R.groupby(["metric", "dataset", "seed"]).p.transform(lambda p: multipletests(p, method="fdr_bh")[1])
+R["family"] = np.where(R.method == "scgpt_cp", "sensitivity", "prereg7")   # BH over the 7 preregistered methods
+R["p_bh"] = R.groupby(["metric", "dataset", "seed", "family"]).p.transform(lambda p: multipletests(p, method="fdr_bh")[1])
 R["verdict"] = R.apply(verdict, axis=1)
 R.to_csv("results/metrics/h1_gaps.csv", index=False)
 

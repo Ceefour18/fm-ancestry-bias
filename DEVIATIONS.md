@@ -92,3 +92,14 @@ Sensitivity results (script 84): no analysis yields a "meaningful gap" for any m
 YRI, fine labels, composition-matched, prostate patients-only/controls-only). Composition matching uses each
 donor's present cell types (renormalised mean composition), so donors lacking a rare type (e.g. DC) are kept;
 with this, composition-matched Randolph gaps are -0.25 to -0.92 and all methods are equivalent.
+
+## 2026-11-26 — Correction: BH family and CellTypist
+Earlier runs of scripts 80/84 applied BH across PCA, scVI, 4 foundation models and scGPT-continual-pretrained.
+The preregistration's 7 methods are the 4 foundation models + PCA, scVI and CellTypist; scGPT-CP is a
+sensitivity analysis. Corrected: BH over the preregistered 7; scGPT-CP reported separately. CellTypist
+(Immune_All_Low, pretrained) now scored on all donors (script 41); coarse labels only (the model merges naive
+and central-memory T cells, so fine-label F1 is not computed for CellTypist).
+CellTypist label-mapping correction: the coarse mapping (inherited from the blinded pilot, script 40) sent
+"Type 1/Type 17/Follicular helper T cells" and "Treg(diff)" to Other instead of CD4_T, and "Kupffer cells"/
+"Mono-mac" to Other instead of Monocyte. Corrected in script 41; "Other" share was equal by ancestry before
+the fix (AA 5.05%, EA 4.89%). CellTypist excluded from the fine-label sensitivity row (no fine labels).
