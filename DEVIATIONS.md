@@ -70,3 +70,11 @@ Paired two-sided Wilcoxon vs scVI across 12 dataset x cell-type units.
    scFoundation -0.60 -> -0.15; scVI -0.59 -> -0.26 (p = 0.029).
 Interpretation (to be tested): reference-label ambiguity at the NK/CD8 boundary, greater in AA donors,
 accounts for most of the foundation-model-specific deficit. Preregistered results are reported unchanged.
+4. POST HOC marker re-annotation (script 83; rule fixed before scoring): author NK/CD8_T cells relabelled by
+   mean(TRAC,CD3D,CD3E,CD3G,CD8B) vs mean(KLRF1,NCAM1,SH2D1B); ties (2,757 cells) keep author label.
+   Author-CD8_T -> marker-NK: AA 5.5% vs EA 2.2%; author-NK -> marker-CD8_T: AA 10.6% vs EA 11.1%.
+   H1 gaps with marker labels: PCA -0.73, scVI -1.33, Geneformer -1.09, UCE -1.24, scGPT -1.11,
+   scFoundation -1.07, scGPT-CP -0.59 (all BH p > 0.1). H1b extra gap vs PCA with marker labels:
+   UCE -0.41 (p 0.17), Geneformer -0.18, scFoundation -0.21, scVI -0.40, scGPT -0.26 (all p > 0.1).
+   Interpretation: the AA deficit (~1 pt) is method-general and persists with marker labels; the
+   foundation-model excess over PCA is label-dependent (PCA's gap grows from -0.21 to -0.73).
