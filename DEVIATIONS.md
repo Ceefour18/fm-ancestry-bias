@@ -58,3 +58,15 @@ Age is available for Randolph only, so pooled models adjust for log(cells), data
 iLISI (harmonypy compute_lisi, perplexity 30) and ancestry silhouette (Euclidean) computed per cell type on
 up to 5,000 cells per cell type (seed 2026), identical cells for every method; Randolph NI cells as in H1.
 Paired two-sided Wilcoxon vs scVI across 12 dataset x cell-type units.
+
+## 2026-11-26 — POST HOC exploratory analyses (not preregistered), prompted by H3
+1. NK confusion matrices (UCE, PCA): NK<->CD8_T confusion 2-3x higher in AA donors.
+2. Marker check (script 82): CD8_T-labelled cells predicted NK are transcriptionally NK-like
+   (TRAC detected 12.4% AA / 20.7% EA vs 64-70% in correctly called CD8 T, 8.5% in NK); 434 AA vs 179 EA cells.
+   Not MAIT (TRAV1-2 0%); TRDC at NK-cell background. NK-like share of CD8_T per donor: AA 13.1% vs EA 6.8%
+   (+7.6 pts, p = 0.0006).
+3. Merged NK+CD8_T into one class and re-scored seed-2026 predictions (Randolph): H1 gaps -0.14 to +0.22
+   (all p > 0.4); H1b extra gap vs PCA shrinks UCE -0.93 -> -0.23, Geneformer -0.76 -> -0.14,
+   scFoundation -0.60 -> -0.15; scVI -0.59 -> -0.26 (p = 0.029).
+Interpretation (to be tested): reference-label ambiguity at the NK/CD8 boundary, greater in AA donors,
+accounts for most of the foundation-model-specific deficit. Preregistered results are reported unchanged.
