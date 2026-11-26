@@ -42,3 +42,14 @@ zero-filled). Weight-load check (2,000 Randolph cells): kNN accuracy 0.960 vs 0.
 Total 19.5 GPU-hours (timing-test projection 19.6). No NaNs; cell order verified against input.
 logs/scf_314.out:genes matched: 18643 of 19264 scFoundation genes (96.8%); UMI kept: 89.0%
 logs/scf_315.out:genes matched: 18791 of 19264 scFoundation genes (97.5%); UMI kept: 94.3%
+Prostate disease group: 15 of 57 donors have "lethal prostate_cancer_group: NA" in GEO GSE270387
+(data/raw/GSE270387/donors.tsv); the study describes its cohort as prostate cancer patients and healthy
+controls. NA is coded as "Control" (3 groups: Control, Nonlethal, Lethal) so all 57 donors enter the
+models as preregistered. The preregistered patients-only sensitivity analysis removes this assumption.
+Prostate disease group: 15 of 57 donors have "lethal prostate_cancer_group: NA" in GEO GSE270387
+(data/raw/GSE270387/donors.tsv); the study describes its cohort as prostate cancer patients and healthy
+controls. NA is coded as "Control" (3 groups: Control, Nonlethal, Lethal) so all 57 donors enter the
+models as preregistered. The preregistered patients-only sensitivity analysis removes this assumption.
+Pooled H1b: Randolph donors (healthy volunteers) are coded disease group "Control", sharing that level with
+prostate controls; coding them as a separate level duplicated the dataset term (singular model).
+Age is available for Randolph only, so pooled models adjust for log(cells), dataset and disease group.
